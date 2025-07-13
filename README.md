@@ -58,11 +58,11 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 ## Difficulties Faced
 
-### 1.Numpy and OpenCV compatibility issue:
+### 1. Numpy and OpenCV compatibility issue:
 - The orange_detector node initially failed due to incompatibility between OpenCV and NumPy. I downgradred by numpy to work with openCV using the command:
 
 ```bash
 pip install numpy<2.0
 ```
 ### 2. Repeated log spam in the terminal:
-- After the detection of orange cone, the warning message kept spanning. I fixed this using the variable alert_triggered to only display the message once in the terminal.
+- After the detection of orange cone, the warning message kept spanning. I fixed this using the variable `alert_triggered` to only display the message once in the terminal.
