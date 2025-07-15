@@ -66,3 +66,16 @@ pip install numpy<2.0
 ```
 ### 2. Repeated log spam in the terminal:
 - After the detection of orange cone, the warning message kept spanning. I fixed this using the variable `alert_triggered` to only display the message once in the terminal.
+
+## Pros
+
+- Real-time detection and visual detection using a boudning box in openCV.
+- Contour-based detection only detects large objects (cones) avoiding false positives.
+
+## Cons
+
+- The system only detects colours so any orange object is detected as an orange cone.
+- The distance from the bot to the cone is not the same each time and totally depends on the area of white pixels (after masking).
+- The system assumes that cones are the largest objects and so ingores all other objects, this means that any object larger than the cone will still be detected as a cone.
+  
+
